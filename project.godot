@@ -25,3 +25,7 @@ folder_colors={
 "res://scripts/": "purple",
 "res://test/": "pink"
 }
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
