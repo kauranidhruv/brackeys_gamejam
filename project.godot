@@ -12,4 +12,16 @@ config_version=5
 
 config/name="brackeys_gamejam"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/icon.svg"
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "red",
+"res://Scenes/": "blue",
+"res://characters/": "orange",
+"res://main/": "yellow",
+"res://player/": "green",
+"res://scripts/": "purple",
+"res://test/": "pink"
+}
