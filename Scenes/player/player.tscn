@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://d1tikkh2axw8a"]
+[gd_scene load_steps=72 format=3 uid="uid://d1tikkh2axw8a"]
 
 [ext_resource type="Script" uid="uid://dfshvsmrcu2s1" path="res://scripts/player.gd" id="1_o4w3n"]
 [ext_resource type="Texture2D" uid="uid://bggofqk1k8r4l" path="res://Assets/Player/Individual Sprites/adventurer-attack1-00.png" id="2_yei8a"]
@@ -247,9 +247,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gci7n")
 }],
-"loop": false,
+"loop": true,
 "name": &"Fall",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -283,7 +283,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Jump",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -317,6 +317,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o4w3n"]
+size = Vector2(8, 25)
+
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("Player_Animation", "Collider")]
 script = ExtResource("1_o4w3n")
 Player_Animation = NodePath("Player_animations")
@@ -324,13 +327,19 @@ Collider = NodePath("Player_collision")
 RUNSPEED = 500
 ACCELARATION = 50
 DECELARATION = 40
-GRAVITY = 600
-JUMPVELOCITY = -500
+GRAVITY = 400
+JUMPVELOCITY = -250
+MAXJUMPS = 5
 
 [node name="Player_animations" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_wsa1w")
-animation = &"Idle"
+animation = &"Jump"
+frame = 3
+frame_progress = 1.0
 
 [node name="Player_collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_o4w3n")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
