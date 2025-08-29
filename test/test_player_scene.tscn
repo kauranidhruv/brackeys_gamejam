@@ -13,3 +13,4 @@ tile_set = ExtResource("1_r8wxi")
 
 [node name="Player" parent="." instance=ExtResource("2_q1wmy")]
 position = Vector2(443, -107)
+MAXJUMPS = 2
