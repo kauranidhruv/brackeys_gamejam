@@ -12,25 +12,30 @@ func _on_physics_process(_delta : float) -> void:
 	player.HandleJump()
 	player.HorizontalMovement()
 	player.GetInputStates()
-	print(player.facing)
-	player.HandleFlipH()
-
-
-func _on_next_transitions() -> void:
+	HandleRun()
+	
+	
+func HandleRun():
 	if (player.movedirectionX != 0):
 		transition.emit("Run")
+	
+func HandleJump():
 	if ((!player.is_on_floor()) and player.velocity.y < 0):
 		transition.emit("Jump")
+
+func HandleFall():
 	if ((!player.is_on_floor()) and player.velocity.y > 0):
 		transition.emit("Fall")
-	
-
-func _on_enter() -> void:
-	animation.play("Run")
-	player.HandleFlipH()
 
 func _on_exit() -> void:
 	animation.stop()
+	
+
+func _on_enter() -> void:
+	animation.play("Idle")
+	player.HandleFlipH()
+
+
 
 
 	

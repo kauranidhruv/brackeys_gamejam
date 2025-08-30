@@ -36,11 +36,11 @@
 [ext_resource type="Texture2D" uid="uid://bnnnu7l8o8gff" path="res://Assets/Player/Individual Sprites/adventurer-slide-01.png" id="35_ss172"]
 [ext_resource type="Script" uid="uid://uwi2rux4f05g" path="res://scripts/Player/States/PlayerState.gd" id="36_jmelf"]
 [ext_resource type="Script" uid="uid://brgwmdxe82yjx" path="res://scripts/Player/States/idle.gd" id="36_qpa8y"]
-[ext_resource type="Script" uid="uid://bkxb8u13lj7bo" path="res://scripts/Player/States/run.gd" id="38_sbwqj"]
+[ext_resource type="Script" uid="uid://cqsweenmm3yy8" path="res://scripts/Player/States/run.gd" id="38_sbwqj"]
 [ext_resource type="Script" uid="uid://r60mw6tf82kx" path="res://scripts/Player/States/jump.gd" id="39_sbwqj"]
 
 [sub_resource type="GDScript" id="GDScript_sbwqj"]
-script/source = "class_name Player
+script/source = "class_name Players
 extends CharacterBody2D
 
 #region Player Variables

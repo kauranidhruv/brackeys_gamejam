@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="brackeys_gamejam"
-run/main_scene="uid://c712uarw62asy"
+run/main_scene="uid://b5cbdjqmhh5c3"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Assets/world_tilset_assets/icon.svg"
 
