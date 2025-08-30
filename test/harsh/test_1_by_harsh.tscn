@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://irrp3lgje1uf"]
+
+[ext_resource type="PackedScene" uid="uid://c712uarw62asy" path="res://Assets/test_player_scene.tscn" id="1_h0rjt"]
+[ext_resource type="PackedScene" uid="uid://dkodpb7qo0o47" path="res://test/harsh/enemy1.tscn" id="2_chws0"]
+
+[node name="test_1_by_harsh" type="Node2D"]
+
+[node name="Test_player_scene" parent="." instance=ExtResource("1_h0rjt")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_chws0")]
+position = Vector2(732, -18)
