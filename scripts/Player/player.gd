@@ -2,7 +2,8 @@ class_name Player
 extends CharacterBody2D
 
 #region Player Variables
-
+@warning_ignore("unused_signal")
+signal transition 
 #nodes
 @export var Player_Animation: AnimatedSprite2D
 @export var Collider:CollisionShape2D
@@ -13,13 +14,14 @@ extends CharacterBody2D
 @export var DECELARATION:int = 25
 @export var GRAVITY:int = 300
 @export var JUMPVELOCITY:int = -200
-@export var MAXJUMPS:int = 1
+@export var MAXJUMPS:int = 2
+
 
 var movespeed:int = RUNSPEED
 var jumpspeed:int = JUMPVELOCITY
-var movedirectionX:int = 0
+var movedirectionX = 0
 var jumps: int = 0
-var facing = 1
+var facing: int
 
 #input variables
 var keyup:bool = false
@@ -33,7 +35,7 @@ var keyjumppressed:bool = false
 
 
 #endregion
-
+#region main loop functions
 
 
 func _ready() -> void:
@@ -53,7 +55,9 @@ func _physics_process(delta: float) -> void:
 	
 	# aniamtions
 	HandleAnimation()
+#endregion
 
+#region custom functions
 func GetInputStates():
 	keyup = Input.is_action_pressed("up")
 	keydown = Input.is_action_pressed("down")
@@ -65,25 +69,38 @@ func GetInputStates():
 	if (keyright): facing = 1
 	if (keyleft): facing = -1
 
-func HorizontalMovement(accelaration:float,decelaration:float):
+func HorizontalMovement(accelaration:float = ACCELARATION,decelaration:float = DECELARATION):
 	movedirectionX = Input.get_axis("left","right")
-	velocity.x = move_toward(velocity.x, movedirectionX * movespeed, accelaration)
-
-func HandleGravity(delta):
-	if (!is_on_floor()):
-		velocity.y += GRAVITY * delta
+	if (movedirectionX != 0):
+		velocity.x = move_toward(velocity.x, movedirectionX * movespeed, accelaration)
+		transition.emit("Run")
 	else:
-		jumps = 0
+		velocity.x = move_toward(velocity.x, movedirectionX * movespeed, accelaration)
+		transition.emit("Idle")
 
-func HandleJump():
-	if (keyjumppressed):
-		if (jumps < MAXJUMPS):
-			velocity.y = JUMPVELOCITY
-			jumps += 1
-
-func HandleAnimation():
+func HandleFlipH():
 	Player_Animation.flip_h = (facing < 0)
 	
+func HandleFalling():
+	if (!is_on_floor()):
+		transition.emit("Fall")
+
+func HandleLanding():
+	if(is_on_floor()):
+		jumps = 0
+		transition.emit("Idle")
+
+func HandleGravity(delta, Gravity: float = GRAVITY):
+	if (!is_on_floor()):
+		velocity.y += Gravity * delta
+	
+
+func HandleJump():
+	if ((keyjumppressed) and (jumps < MAXJUMPS)):
+		velocity.y = JUMPVELOCITY
+		jumps += 1
+
+func HandleAnimation():
 	if (is_on_floor()):
 		if (velocity.x != 0):
 			Player_Animation.play("Run")
@@ -91,8 +108,9 @@ func HandleAnimation():
 			Player_Animation.play("Idle")
 
 	else:
-		if (facing > 0): 
+		if (velocity.y < 0): 
 			Player_Animation.play("Jump")
 		else:
-			Player_Animation.play("Jump")
+			Player_Animation.play("Fall")
 			
+#endregion

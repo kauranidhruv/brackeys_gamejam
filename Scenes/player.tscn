@@ -1,6 +1,6 @@
-[gd_scene load_steps=72 format=3 uid="uid://d1tikkh2axw8a"]
+[gd_scene load_steps=75 format=3 uid="uid://d1tikkh2axw8a"]
 
-[ext_resource type="Script" uid="uid://dfshvsmrcu2s1" path="res://scripts/player.gd" id="1_o4w3n"]
+[ext_resource type="Script" uid="uid://dfshvsmrcu2s1" path="res://scripts/Player/player.gd" id="1_o4w3n"]
 [ext_resource type="Texture2D" uid="uid://bggofqk1k8r4l" path="res://Assets/Player/Individual Sprites/adventurer-attack1-00.png" id="2_yei8a"]
 [ext_resource type="Texture2D" uid="uid://nq7jrtny8c84" path="res://Assets/Player/Individual Sprites/adventurer-attack1-01.png" id="3_1larn"]
 [ext_resource type="Texture2D" uid="uid://cbe3iqt05l2rn" path="res://Assets/Player/Individual Sprites/adventurer-attack1-02.png" id="4_tiw0p"]
@@ -35,6 +35,9 @@
 [ext_resource type="Texture2D" uid="uid://11kmvphcddkl" path="res://Assets/Player/Individual Sprites/adventurer-run2-04.png" id="33_2yv6k"]
 [ext_resource type="Texture2D" uid="uid://cdmdknp68qphf" path="res://Assets/Player/Individual Sprites/adventurer-slide-00.png" id="34_nlir6"]
 [ext_resource type="Texture2D" uid="uid://bnnnu7l8o8gff" path="res://Assets/Player/Individual Sprites/adventurer-slide-01.png" id="35_5grht"]
+[ext_resource type="Script" uid="uid://uwi2rux4f05g" path="res://scripts/Player/States/PlayerState.gd" id="36_1larn"]
+[ext_resource type="Script" uid="uid://brgwmdxe82yjx" path="res://Scenes/player/idle.gd" id="37_tiw0p"]
+[ext_resource type="Script" uid="uid://bkxb8u13lj7bo" path="res://Scenes/player/run.gd" id="38_tiw0p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b2j0d"]
 atlas = ExtResource("2_yei8a")
@@ -303,7 +306,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -314,7 +317,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Slide",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o4w3n"]
@@ -329,17 +332,36 @@ ACCELARATION = 50
 DECELARATION = 40
 GRAVITY = 400
 JUMPVELOCITY = -250
-MAXJUMPS = 5
 
 [node name="Player_animations" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_wsa1w")
-animation = &"Jump"
-frame = 3
-frame_progress = 1.0
+animation = &"Idle"
+flip_h = true
 
 [node name="Player_collision" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, 4.5)
 shape = SubResource("RectangleShape2D_o4w3n")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
+script = ExtResource("36_1larn")
+initial_node_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "animation")]
+script = ExtResource("37_tiw0p")
+player = NodePath("../..")
+animation = NodePath("../../Player_animations")
+
+[node name="Run" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "animation")]
+script = ExtResource("38_tiw0p")
+player = NodePath("../..")
+animation = NodePath("../../Player_animations")
+
+[node name="Jump" type="Node" parent="StateMachine"]
+
+[node name="JumpPeak" type="Node" parent="StateMachine"]
+
+[node name="Fall" type="Node" parent="StateMachine"]
