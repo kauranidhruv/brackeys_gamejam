@@ -1,297 +1,187 @@
-[gd_scene load_steps=76 format=3 uid="uid://cqfwb2vwwrdxo"]
+[gd_scene load_steps=81 format=3 uid="uid://dd0mqkr5rkcc3"]
 
-[ext_resource type="Texture2D" uid="uid://bggofqk1k8r4l" path="res://Assets/Player/Individual Sprites/adventurer-attack1-00.png" id="2_sbwqj"]
-[ext_resource type="Texture2D" uid="uid://nq7jrtny8c84" path="res://Assets/Player/Individual Sprites/adventurer-attack1-01.png" id="3_xwi16"]
-[ext_resource type="Texture2D" uid="uid://cbe3iqt05l2rn" path="res://Assets/Player/Individual Sprites/adventurer-attack1-02.png" id="4_sweqm"]
-[ext_resource type="Texture2D" uid="uid://bu60s88espxq2" path="res://Assets/Player/Individual Sprites/adventurer-attack1-03.png" id="5_ph33w"]
-[ext_resource type="Texture2D" uid="uid://d3g5imrpqikgs" path="res://Assets/Player/Individual Sprites/adventurer-attack1-04.png" id="6_7ldla"]
-[ext_resource type="Texture2D" uid="uid://n3va885vi2eo" path="res://Assets/Player/Individual Sprites/adventurer-attack2-00.png" id="7_r7t2e"]
-[ext_resource type="Texture2D" uid="uid://cak6k4v64suwo" path="res://Assets/Player/Individual Sprites/adventurer-attack2-01.png" id="8_nmr2m"]
-[ext_resource type="Texture2D" uid="uid://d3tcckc6t1spj" path="res://Assets/Player/Individual Sprites/adventurer-attack2-02.png" id="9_ax3m3"]
-[ext_resource type="Texture2D" uid="uid://xnk06trjyxxc" path="res://Assets/Player/Individual Sprites/adventurer-attack2-03.png" id="10_3vlem"]
-[ext_resource type="Texture2D" uid="uid://hh2f6n4ojfhg" path="res://Assets/Player/Individual Sprites/adventurer-attack2-04.png" id="11_8eeqe"]
-[ext_resource type="Texture2D" uid="uid://jom4aw6e8s1u" path="res://Assets/Player/Individual Sprites/adventurer-attack2-05.png" id="12_5x828"]
-[ext_resource type="Texture2D" uid="uid://bx1n8c23h1ri7" path="res://Assets/Player/Individual Sprites/adventurer-attack3-00.png" id="13_c1k8q"]
-[ext_resource type="Texture2D" uid="uid://dp4rkqteq20qf" path="res://Assets/Player/Individual Sprites/adventurer-attack3-01.png" id="14_e6mvm"]
-[ext_resource type="Texture2D" uid="uid://pnh0k5gu55va" path="res://Assets/Player/Individual Sprites/adventurer-attack3-02.png" id="15_57lvd"]
-[ext_resource type="Texture2D" uid="uid://b3fcdk6bdsfmt" path="res://Assets/Player/Individual Sprites/adventurer-attack3-03.png" id="16_ie7r7"]
-[ext_resource type="Texture2D" uid="uid://c2l14oin6cvvk" path="res://Assets/Player/Individual Sprites/adventurer-attack3-04.png" id="17_vq3lt"]
-[ext_resource type="Texture2D" uid="uid://dmkro3ffyxaos" path="res://Assets/Player/Individual Sprites/adventurer-attack3-05.png" id="18_pukcj"]
-[ext_resource type="Texture2D" uid="uid://d35qrolq4lt60" path="res://Assets/Player/Individual Sprites/adventurer-fall-00.png" id="19_1htnp"]
-[ext_resource type="Texture2D" uid="uid://dp5bjxwv6p3p3" path="res://Assets/Player/Individual Sprites/adventurer-fall-01.png" id="20_m376e"]
-[ext_resource type="Texture2D" uid="uid://benj0who6porq" path="res://Assets/Player/Individual Sprites/adventurer-idle-2-00.png" id="21_6b312"]
-[ext_resource type="Texture2D" uid="uid://b16fll2t5lt4a" path="res://Assets/Player/Individual Sprites/adventurer-idle-2-01.png" id="22_lisdf"]
-[ext_resource type="Texture2D" uid="uid://cjm6dxnnulvg2" path="res://Assets/Player/Individual Sprites/adventurer-idle-2-02.png" id="23_n1x1j"]
-[ext_resource type="Texture2D" uid="uid://ctatb4vy2tsak" path="res://Assets/Player/Individual Sprites/adventurer-idle-2-03.png" id="24_c8b32"]
-[ext_resource type="Texture2D" uid="uid://bmf3ix1wo5c4y" path="res://Assets/Player/Individual Sprites/adventurer-jump-00.png" id="25_nj1g2"]
-[ext_resource type="Texture2D" uid="uid://cq0qt1gvfkndk" path="res://Assets/Player/Individual Sprites/adventurer-jump-01.png" id="26_usbl8"]
-[ext_resource type="Texture2D" uid="uid://bvc7ylgniknw7" path="res://Assets/Player/Individual Sprites/adventurer-jump-02.png" id="27_dtg1u"]
-[ext_resource type="Texture2D" uid="uid://bipeeiggbycdd" path="res://Assets/Player/Individual Sprites/adventurer-jump-03.png" id="28_nuaet"]
-[ext_resource type="Texture2D" uid="uid://b2308dm53tune" path="res://Assets/Player/Individual Sprites/adventurer-run2-00.png" id="29_bqbau"]
-[ext_resource type="Texture2D" uid="uid://dhmeccavcvrvu" path="res://Assets/Player/Individual Sprites/adventurer-run2-01.png" id="30_f5f5t"]
-[ext_resource type="Texture2D" uid="uid://bxhb4cfinr5j8" path="res://Assets/Player/Individual Sprites/adventurer-run2-02.png" id="31_qvbpb"]
-[ext_resource type="Texture2D" uid="uid://ciwedrgtfktad" path="res://Assets/Player/Individual Sprites/adventurer-run2-03.png" id="32_sscpr"]
-[ext_resource type="Texture2D" uid="uid://11kmvphcddkl" path="res://Assets/Player/Individual Sprites/adventurer-run2-04.png" id="33_by7i4"]
-[ext_resource type="Texture2D" uid="uid://cdmdknp68qphf" path="res://Assets/Player/Individual Sprites/adventurer-slide-00.png" id="34_3uvy8"]
-[ext_resource type="Texture2D" uid="uid://bnnnu7l8o8gff" path="res://Assets/Player/Individual Sprites/adventurer-slide-01.png" id="35_ss172"]
-[ext_resource type="Script" uid="uid://uwi2rux4f05g" path="res://scripts/Player/States/PlayerState.gd" id="36_jmelf"]
-[ext_resource type="Script" uid="uid://brgwmdxe82yjx" path="res://scripts/Player/States/idle.gd" id="36_qpa8y"]
-[ext_resource type="Script" uid="uid://bkxb8u13lj7bo" path="res://scripts/Player/States/run.gd" id="38_sbwqj"]
-[ext_resource type="Script" uid="uid://r60mw6tf82kx" path="res://scripts/Player/States/jump.gd" id="39_sbwqj"]
-
-[sub_resource type="GDScript" id="GDScript_sbwqj"]
-script/source = "class_name Player
-extends CharacterBody2D
-
-#region Player Variables
-@warning_ignore(\"unused_signal\")
-signal transition 
-#nodes
-@export var Player_Animation: AnimatedSprite2D
-@export var Collider:CollisionShape2D
-
-#physics variables
-@export var RUNSPEED:int = 150
-@export var ACCELARATION:int = 30
-@export var DECELARATION:int = 25
-@export var GRAVITY:int = 300
-@export var JUMPVELOCITY:int = -200
-@export var MAXJUMPS:int = 2
-
-
-var movespeed:int = RUNSPEED
-var jumpspeed:int = JUMPVELOCITY
-var movedirectionX = 0
-var jumps: int = 0
-var facing: int
-
-#input variables
-var keyup:bool = false
-var keydown:bool = false
-var keyright:bool = false
-var keyleft:bool = false
-var keyjump:bool = false
-var keyjumppressed:bool = false
-
-
-
-
-#endregion
-#region main loop functions
-
-
-func _ready() -> void:
-	pass
-
-func _physics_process(delta: float) -> void:
-	# GetInputStates
-	GetInputStates()
-	
-	# Handle movements
-	HandleGravity(delta)
-	HorizontalMovement(ACCELARATION, DECELARATION)
-	HandleJump() 
-
-	# commit movement
-	move_and_slide()
-	
-	# aniamtions
-	HandleAnimation()
-#endregion
-
-#region custom functions
-func GetInputStates():
-	keyup = Input.is_action_pressed(\"up\")
-	keydown = Input.is_action_pressed(\"down\")
-	keyright = Input.is_action_pressed(\"right\")
-	keyleft = Input.is_action_pressed(\"left\")
-	keyjump = Input.is_action_pressed(\"jump\")
-	keyjumppressed = Input.is_action_just_pressed(\"jump\")
-	
-	if (keyright): facing = 1
-	if (keyleft): facing = -1
-
-func HorizontalMovement(accelaration:float = ACCELARATION,decelaration:float = DECELARATION):
-	movedirectionX = Input.get_axis(\"left\",\"right\")
-	if (movedirectionX != 0):
-		velocity.x = move_toward(velocity.x, movedirectionX * movespeed, accelaration)
-		transition.emit(\"Run\")
-	else:
-		velocity.x = move_toward(velocity.x, movedirectionX * movespeed, accelaration)
-		transition.emit(\"Idle\")
-
-func HandleFlipH():
-	Player_Animation.flip_h = (facing < 0)
-	
-func HandleFalling():
-	if (!is_on_floor()):
-		transition.emit(\"Fall\")
-
-func HandleLanding():
-	if(is_on_floor()):
-		jumps = 0
-		transition.emit(\"Idle\")
-
-func HandleGravity(delta, Gravity: float = GRAVITY):
-	if (!is_on_floor()):
-		velocity.y += Gravity * delta
-	
-
-func HandleJump():
-	if ((keyjumppressed) and (jumps < MAXJUMPS)):
-		velocity.y = JUMPVELOCITY
-		jumps += 1
-
-func HandleAnimation():
-	if (is_on_floor()):
-		if (velocity.x != 0):
-			Player_Animation.play(\"Run\")
-		else:
-			Player_Animation.play(\"Idle\")
-
-	else:
-		if (velocity.y < 0): 
-			Player_Animation.play(\"Jump\")
-		else:
-			Player_Animation.play(\"Fall\")
-			
-#endregion
-"
+[ext_resource type="Script" uid="uid://d3vii6k0jywci" path="res://Scenes/player.gd" id="1_8gxox"]
+[ext_resource type="Texture2D" uid="uid://bggofqk1k8r4l" path="res://Assets/Player/Individual Sprites/adventurer-attack1-00.png" id="2_u7q4u"]
+[ext_resource type="Texture2D" uid="uid://nq7jrtny8c84" path="res://Assets/Player/Individual Sprites/adventurer-attack1-01.png" id="3_ow0oh"]
+[ext_resource type="Texture2D" uid="uid://cbe3iqt05l2rn" path="res://Assets/Player/Individual Sprites/adventurer-attack1-02.png" id="4_shso4"]
+[ext_resource type="Texture2D" uid="uid://bu60s88espxq2" path="res://Assets/Player/Individual Sprites/adventurer-attack1-03.png" id="5_i12ug"]
+[ext_resource type="Texture2D" uid="uid://d3g5imrpqikgs" path="res://Assets/Player/Individual Sprites/adventurer-attack1-04.png" id="6_3is57"]
+[ext_resource type="Texture2D" uid="uid://n3va885vi2eo" path="res://Assets/Player/Individual Sprites/adventurer-attack2-00.png" id="7_vp4qt"]
+[ext_resource type="Texture2D" uid="uid://cak6k4v64suwo" path="res://Assets/Player/Individual Sprites/adventurer-attack2-01.png" id="8_mt1nj"]
+[ext_resource type="Texture2D" uid="uid://d3tcckc6t1spj" path="res://Assets/Player/Individual Sprites/adventurer-attack2-02.png" id="9_3unst"]
+[ext_resource type="Texture2D" uid="uid://xnk06trjyxxc" path="res://Assets/Player/Individual Sprites/adventurer-attack2-03.png" id="10_fi0dx"]
+[ext_resource type="Texture2D" uid="uid://hh2f6n4ojfhg" path="res://Assets/Player/Individual Sprites/adventurer-attack2-04.png" id="11_mce6g"]
+[ext_resource type="Texture2D" uid="uid://jom4aw6e8s1u" path="res://Assets/Player/Individual Sprites/adventurer-attack2-05.png" id="12_nfw5m"]
+[ext_resource type="Texture2D" uid="uid://bx1n8c23h1ri7" path="res://Assets/Player/Individual Sprites/adventurer-attack3-00.png" id="13_1ahqj"]
+[ext_resource type="Texture2D" uid="uid://dp4rkqteq20qf" path="res://Assets/Player/Individual Sprites/adventurer-attack3-01.png" id="14_nbb6y"]
+[ext_resource type="Texture2D" uid="uid://pnh0k5gu55va" path="res://Assets/Player/Individual Sprites/adventurer-attack3-02.png" id="15_ptfmh"]
+[ext_resource type="Texture2D" uid="uid://b3fcdk6bdsfmt" path="res://Assets/Player/Individual Sprites/adventurer-attack3-03.png" id="16_0854a"]
+[ext_resource type="Texture2D" uid="uid://c2l14oin6cvvk" path="res://Assets/Player/Individual Sprites/adventurer-attack3-04.png" id="17_75p27"]
+[ext_resource type="Texture2D" uid="uid://dmkro3ffyxaos" path="res://Assets/Player/Individual Sprites/adventurer-attack3-05.png" id="18_nmywt"]
+[ext_resource type="Texture2D" uid="uid://d35qrolq4lt60" path="res://Assets/Player/Individual Sprites/adventurer-fall-00.png" id="19_rfbon"]
+[ext_resource type="Texture2D" uid="uid://dp5bjxwv6p3p3" path="res://Assets/Player/Individual Sprites/adventurer-fall-01.png" id="20_hgf1l"]
+[ext_resource type="Texture2D" uid="uid://benj0who6porq" path="res://Assets/Player/Individual Sprites/adventurer-idle-2-00.png" id="21_xb2l2"]
+[ext_resource type="Texture2D" uid="uid://b16fll2t5lt4a" path="res://Assets/Player/Individual Sprites/adventurer-idle-2-01.png" id="22_ocoad"]
+[ext_resource type="Texture2D" uid="uid://cjm6dxnnulvg2" path="res://Assets/Player/Individual Sprites/adventurer-idle-2-02.png" id="23_r35nf"]
+[ext_resource type="Texture2D" uid="uid://ctatb4vy2tsak" path="res://Assets/Player/Individual Sprites/adventurer-idle-2-03.png" id="24_hf81g"]
+[ext_resource type="Texture2D" uid="uid://bmf3ix1wo5c4y" path="res://Assets/Player/Individual Sprites/adventurer-jump-00.png" id="25_s1h0b"]
+[ext_resource type="Texture2D" uid="uid://cq0qt1gvfkndk" path="res://Assets/Player/Individual Sprites/adventurer-jump-01.png" id="26_s5o4n"]
+[ext_resource type="Texture2D" uid="uid://bvc7ylgniknw7" path="res://Assets/Player/Individual Sprites/adventurer-jump-02.png" id="27_pfjpd"]
+[ext_resource type="Texture2D" uid="uid://bipeeiggbycdd" path="res://Assets/Player/Individual Sprites/adventurer-jump-03.png" id="28_sywby"]
+[ext_resource type="Texture2D" uid="uid://dvvxihanhvp7h" path="res://Assets/Player/Individual Sprites/adventurer-crnr-jmp-00.png" id="29_7ldla"]
+[ext_resource type="Texture2D" uid="uid://b2308dm53tune" path="res://Assets/Player/Individual Sprites/adventurer-run2-00.png" id="29_b36gi"]
+[ext_resource type="Texture2D" uid="uid://dhmeccavcvrvu" path="res://Assets/Player/Individual Sprites/adventurer-run2-01.png" id="30_bs0vi"]
+[ext_resource type="Texture2D" uid="uid://bxhb4cfinr5j8" path="res://Assets/Player/Individual Sprites/adventurer-run2-02.png" id="31_lxi4n"]
+[ext_resource type="Texture2D" uid="uid://ciwedrgtfktad" path="res://Assets/Player/Individual Sprites/adventurer-run2-03.png" id="32_apxt7"]
+[ext_resource type="Texture2D" uid="uid://11kmvphcddkl" path="res://Assets/Player/Individual Sprites/adventurer-run2-04.png" id="33_dvnj3"]
+[ext_resource type="Texture2D" uid="uid://cdmdknp68qphf" path="res://Assets/Player/Individual Sprites/adventurer-slide-00.png" id="34_3riw2"]
+[ext_resource type="Texture2D" uid="uid://bnnnu7l8o8gff" path="res://Assets/Player/Individual Sprites/adventurer-slide-01.png" id="35_4lr8v"]
+[ext_resource type="Script" uid="uid://xtak4f3htlw6" path="res://Scenes/States.gd" id="36_8gxox"]
+[ext_resource type="Script" uid="uid://bnwdxrkce1fhi" path="res://Scenes/IdleState.gd" id="37_11gg7"]
+[ext_resource type="Script" uid="uid://b2dqpagvl5kd6" path="res://Scenes/LockedState.gd" id="37_ph33w"]
+[ext_resource type="Script" uid="uid://bskhsx12lxu5w" path="res://Scenes/RunState.gd" id="38_qpa8y"]
+[ext_resource type="Script" uid="uid://cnev3brscxgj3" path="res://Scenes/JumpState.gd" id="39_sbwqj"]
+[ext_resource type="Script" uid="uid://d0xt1m20jt751" path="res://Scenes/JumpPeakState.gd" id="40_xwi16"]
+[ext_resource type="Script" uid="uid://wq5ljqgwxtgx" path="res://Scenes/FallState.gd" id="42_7ldla"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b2j0d"]
-atlas = ExtResource("2_sbwqj")
+atlas = ExtResource("2_u7q4u")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7l6ig"]
-atlas = ExtResource("3_xwi16")
+atlas = ExtResource("3_ow0oh")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j3r50"]
-atlas = ExtResource("4_sweqm")
+atlas = ExtResource("4_shso4")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_utr5e"]
-atlas = ExtResource("5_ph33w")
+atlas = ExtResource("5_i12ug")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kewli"]
-atlas = ExtResource("6_7ldla")
+atlas = ExtResource("6_3is57")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_do7qw"]
-atlas = ExtResource("7_r7t2e")
+atlas = ExtResource("7_vp4qt")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2h6tc"]
-atlas = ExtResource("8_nmr2m")
+atlas = ExtResource("8_mt1nj")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8rogd"]
-atlas = ExtResource("9_ax3m3")
+atlas = ExtResource("9_3unst")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_48p26"]
-atlas = ExtResource("10_3vlem")
+atlas = ExtResource("10_fi0dx")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_anp34"]
-atlas = ExtResource("11_8eeqe")
+atlas = ExtResource("11_mce6g")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jdjat"]
-atlas = ExtResource("12_5x828")
+atlas = ExtResource("12_nfw5m")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j420s"]
-atlas = ExtResource("13_c1k8q")
+atlas = ExtResource("13_1ahqj")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kcq4v"]
-atlas = ExtResource("14_e6mvm")
+atlas = ExtResource("14_nbb6y")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qavcc"]
-atlas = ExtResource("15_57lvd")
+atlas = ExtResource("15_ptfmh")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bd26m"]
-atlas = ExtResource("16_ie7r7")
+atlas = ExtResource("16_0854a")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lufic"]
-atlas = ExtResource("17_vq3lt")
+atlas = ExtResource("17_75p27")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nxclr"]
-atlas = ExtResource("18_pukcj")
+atlas = ExtResource("18_nmywt")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onxu2"]
-atlas = ExtResource("19_1htnp")
+atlas = ExtResource("19_rfbon")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gci7n"]
-atlas = ExtResource("20_m376e")
+atlas = ExtResource("20_hgf1l")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tcwf7"]
-atlas = ExtResource("21_6b312")
+atlas = ExtResource("21_xb2l2")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_20bc7"]
-atlas = ExtResource("22_lisdf")
+atlas = ExtResource("22_ocoad")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jfgxe"]
-atlas = ExtResource("23_n1x1j")
+atlas = ExtResource("23_r35nf")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yg0n1"]
-atlas = ExtResource("24_c8b32")
+atlas = ExtResource("24_hf81g")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qjt2w"]
-atlas = ExtResource("25_nj1g2")
+atlas = ExtResource("25_s1h0b")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2lfai"]
-atlas = ExtResource("26_usbl8")
+atlas = ExtResource("26_s5o4n")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j3o0i"]
-atlas = ExtResource("27_dtg1u")
+atlas = ExtResource("27_pfjpd")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pgo6y"]
-atlas = ExtResource("28_nuaet")
+atlas = ExtResource("28_sywby")
+region = Rect2(0, 0, 50, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7t2e"]
+atlas = ExtResource("29_7ldla")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qm6yy"]
-atlas = ExtResource("29_bqbau")
+atlas = ExtResource("29_b36gi")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gcmgo"]
-atlas = ExtResource("30_f5f5t")
+atlas = ExtResource("30_bs0vi")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rnncm"]
-atlas = ExtResource("31_qvbpb")
+atlas = ExtResource("31_lxi4n")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nj2w7"]
-atlas = ExtResource("32_sscpr")
+atlas = ExtResource("32_apxt7")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iojyt"]
-atlas = ExtResource("33_by7i4")
+atlas = ExtResource("33_dvnj3")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vhicv"]
-atlas = ExtResource("34_3uvy8")
+atlas = ExtResource("34_3riw2")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hrakr"]
-atlas = ExtResource("35_ss172")
+atlas = ExtResource("35_4lr8v")
 region = Rect2(0, 0, 50, 37)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wsa1w"]
@@ -409,6 +299,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_r7t2e")
+}],
+"loop": true,
+"name": &"JumpFrame",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_qm6yy")
 }, {
 "duration": 1.0,
@@ -425,7 +323,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run",
-"speed": 15.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -443,19 +341,17 @@ animations = [{
 size = Vector2(8, 25)
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("Player_Animation", "Collider")]
-script = SubResource("GDScript_sbwqj")
+script = ExtResource("1_8gxox")
 Player_Animation = NodePath("Player_animations")
 Collider = NodePath("Player_collision")
-RUNSPEED = 500
-ACCELARATION = 50
-DECELARATION = 40
-GRAVITY = 400
-JUMPVELOCITY = -250
+JUMPBUFFERTIME = 0.05
+JUMPCOOLDOWN = 0.5
 
 [node name="Player_animations" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_wsa1w")
-animation = &"Idle"
-flip_h = true
+animation = &"Slide"
+frame = 1
+frame_progress = 0.935947
 
 [node name="Player_collision" type="CollisionShape2D" parent="."]
 visible = false
@@ -464,24 +360,44 @@ shape = SubResource("RectangleShape2D_o4w3n")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
+limit_left = -7000000
+limit_top = -7000000
+limit_right = 7000000
+limit_bottom = 7000000
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
 
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
-script = ExtResource("36_jmelf")
-initial_node_state = NodePath("Idle")
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("36_8gxox")
 
-[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "animation")]
-script = ExtResource("36_qpa8y")
-player = NodePath("../..")
-animation = NodePath("../../Player_animations")
+[node name="Locked" type="Node" parent="StateMachine"]
+script = ExtResource("37_ph33w")
 
-[node name="Run" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "animation")]
-script = ExtResource("38_sbwqj")
-player = NodePath("../..")
-animation = NodePath("../../Player_animations")
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("37_11gg7")
+
+[node name="Run" type="Node" parent="StateMachine"]
+script = ExtResource("38_qpa8y")
 
 [node name="Jump" type="Node" parent="StateMachine"]
 script = ExtResource("39_sbwqj")
 
 [node name="JumpPeak" type="Node" parent="StateMachine"]
+script = ExtResource("40_xwi16")
 
 [node name="Fall" type="Node" parent="StateMachine"]
+script = ExtResource("42_7ldla")
+
+[node name="Timers" type="Node" parent="."]
+
+[node name="JumpBuffer" type="Timer" parent="Timers"]
+one_shot = true
+
+[node name="CoyoteTimer" type="Timer" parent="Timers"]
+one_shot = true
+
+[node name="JumpCooldownTimer" type="Timer" parent="Timers"]
+one_shot = true

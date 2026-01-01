@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=4 uid="uid://c712uarw62asy"]
+[gd_scene load_steps=4 format=4 uid="uid://c712uarw62asy"]
 
 [ext_resource type="TileSet" uid="uid://cokjs1cp1mkcd" path="res://tilesets_and_other_assets/world_tileset.tres" id="1_a3086"]
-[ext_resource type="PackedScene" uid="uid://dvwjpe14sqyp7" path="res://test/harsh/player.tscn" id="2_a3086"]
+[ext_resource type="PackedScene" uid="uid://dd0mqkr5rkcc3" path="res://Scenes/player.tscn" id="2_a3086"]
+[ext_resource type="PackedScene" uid="uid://dkodpb7qo0o47" path="res://test/harsh/enemy1.tscn" id="3_qk8ib"]
 
 [node name="Test_player_scene" type="Node2D"]
 
@@ -12,4 +13,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAOABQAAAAAAAEAAAAOABUAAAABAAAAAAAPABQ
 tile_set = ExtResource("1_a3086")
 
 [node name="Player" parent="." instance=ExtResource("2_a3086")]
-position = Vector2(294, -140)
+position = Vector2(232, -153)
+
+[node name="Enemy" parent="." instance=ExtResource("3_qk8ib")]
+position = Vector2(431, -93)
